@@ -93,7 +93,7 @@ body{
 
 input{
     border-radius: 56px; 
-    position:absolute;
+    position: absolute;
     border: 1px solid hsl(0, 36%, 70%);
     height: 60px;
     width: 400px; 
