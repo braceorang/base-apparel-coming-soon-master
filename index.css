@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image:url("images/bg-pattern-desktop.svg"),linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    
+}
+
+.grid-contanier{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas:
+        'content image'
+        'body image'
+        'body2 image'
+
+   
+
+}
+ /* section-hero-img */
+.image-hero{
+    grid-area : image;
+    object-fit: cover;
+    width: 40%;
+    height: auto;
+    margin-left: 30px;
+    
+    
+}
+
+/* section-headContent */
+
+.head-content{
+    grid-area : content;
+    padding: 7%;
+    margin-left: 10%;
+    
+    
+}
+
+/* section-content1 */
+.body-content{
+    grid-area : body;
+    padding: 7%;
+    margin-left: 10%;
+    font-size: 16px;
+    line-height: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+
+}
+
+.body-content h1{
+    font-size: 4rem;
+}
+
+.we-content{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+/* section-content2 */
+
+.body-content2{
+    grid-area:body2;
+    padding: 7%;
+    margin-right: 10px;
+    margin-left: 10%;
+    color: hsl(0, 36%, 70%);
+    max-width: 350px;
+    line-height: 2;
+    transform: translatey(-100px);
+}
+
+.body-content2 p{
+    width: 450px;
+
+}
+
+
+/* section-button */
+
+
+.formInput{
+    position: relative;
+    width: 400px;
+    
+}
+
+input{
+    border-radius: 56px; 
+    position:absolute;
+    border: 1px solid hsl(0, 36%, 70%);
+    height: 60px;
+    width: 400px; 
+    padding-left: 5%;
+    color:hsl(0, 36%, 70%);
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;       
+}
+
+input:focus{
+    outline: none;
+}
+
+
+input::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+
+.borderWarning{
+    border: 2px solid hsl(0, 93%, 68%)
+}
+
+
+.myButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius:56px;
+    border:1px solid hsl(0, 36%, 70%);
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    font-weight: 400;
+    font-size: 2rem;
+    color: white;
+    width: 120px;
+    height: 60px;
+    cursor: pointer;
+}
+.myButton:hover{
+    border:1px solid hsl(0, 93%, 68%);
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 83%, 81%));
+    box-shadow:5px 10px 20px  hsl(0, 80%, 86%); 
+}
+
+
+.buttonWarningEmail{
+    padding: 10%;
+    margin-right: auto;
+    font-size: 0.7rem;
+    color: hsl(0, 93%, 68%);
+    transform: translateY(40px);
+    
+    
+}
+
+.buttonSignal{
+    position: absolute;
+    right: 32%;
+    transform: translateY(20px);
+   
+ 
+    
+}
+
+.attribution{
+    grid-area: footer;
+    text-align: center;
+    margin-left: 10%;
+    
+}
+
+.error{
+    display:none
+}
+
+
+@media(max-width:600px){
+    .grid-contanier{
+        display: grid;
+        grid-template-rows: auto auto auto auto  auto;
+        grid-template-areas:
+            'content '
+            'image'
+            'body'
+            'body2'
+            'footer'
+            
+    
+       
+    
+    }
+
+    .image-hero{
+        margin-left: -30px;
+    }
+}
+
+
